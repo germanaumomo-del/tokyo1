@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>⭐ 東京夏日食玩買5天家庭之旅 ⭐</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Playful rounded font -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;900&family=Noto+Sans+TC:wght@500;700;900&display=swap" rel="stylesheet">
     
     <style>
@@ -30,6 +33,19 @@
         .sticker-card:hover {
             transform: scale(1.02) translateY(-4px);
             box-shadow: 12px 12px 0px #2d2d2d;
+        }
+
+        /* 貼紙風格迷你卡片 */
+        .mini-sticker {
+            border: 3px solid #2d2d2d;
+            box-shadow: 4px 4px 0px #2d2d2d;
+            border-radius: 16px;
+            background-color: #ffffff;
+            transition: all 0.2s ease;
+        }
+        .mini-sticker:hover {
+            transform: translateY(-2px);
+            box-shadow: 6px 6px 0px #2d2d2d;
         }
 
         /* 漂浮氣泡背景 */
@@ -107,12 +123,15 @@
 </head>
 <body class="overflow-x-hidden relative">
 
+    <!-- 可愛氣泡背景 -->
     <div class="bubble w-12 h-12 left-5" style="animation-delay: 0s;"></div>
     <div class="bubble w-8 h-8 left-1/3" style="animation-delay: 4s;"></div>
     <div class="bubble w-16 h-16 left-2/3" style="animation-delay: 1.5s;"></div>
     <div class="bubble w-10 h-10 left-[85%]" style="animation-delay: 6s;"></div>
 
+    <!-- 頂部波浪大橫幅 Banner -->
     <header class="bg-gradient-to-b from-[#ffe5ec] to-[#ffccd5] border-b-4 border-[#2d2d2d] relative py-10 px-4 text-center">
+        <!-- 漂浮星星圖示 -->
         <div class="absolute top-4 left-6 text-pink-500 opacity-60 hidden md:block">
             <i data-lucide="sparkles" class="w-8 h-8 animate-pulse"></i>
         </div>
@@ -121,16 +140,18 @@
         </div>
 
         <div class="max-w-4xl mx-auto flex flex-col items-center">
-            <span class="bg-yellow-300 text-yellow-950 border-2 border-slate-800 text-xs font-black px-4 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 animate-bounce">
+            <!-- 頂部繽紛標籤 -->
+            <span class="bg-yellow-300 text-yellow-955 border-2 border-slate-800 text-xs font-black px-4 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 animate-bounce">
                 🎉 2026 夏日最萌暑假行！🌸地圖直達版🗺️
             </span>
             <h1 class="text-3xl md:text-5xl font-black text-slate-800 mt-4 tracking-wide drop-shadow-sm flex items-center gap-2">
                 東京夏日食玩買5天家庭之旅 🗺️🛍️🍦
             </h1>
             <p class="text-slate-700 text-sm md:text-base font-bold mt-2 max-w-xl leading-relaxed">
-                🧸 專為 10歲 & 13歲女兒量身定制：吉伊卡哇、Miffy、三麗鷗夢幻連動！100%全熟食超完美攻略！
+                🧸 專為 10歲 & 13歲女兒量身定制：吉伊卡哇、Miffy、三麗鷗夢幻連動！100%全熟食超完美攻略！🌟✨
             </p>
 
+            <!-- 航班與預算資訊 -->
             <div class="mt-6 bg-[#fffbf0] border-4 border-[#2d2d2d] shadow-[5px_5px_0px_#2d2d2d] rounded-2xl p-4 max-w-lg w-full grid grid-cols-2 gap-2 text-xs font-bold text-slate-700">
                 <div class="border-r-2 border-dashed border-slate-400 pr-2">
                     <p class="text-pink-500 flex items-center gap-1 justify-center font-black"><i data-lucide="plane-takeoff" class="w-3.5 h-3.5"></i> 去程 HB320 ✈️</p>
@@ -148,6 +169,7 @@
         </div>
     </header>
 
+    <!-- 可愛 Tab 導航列 -->
     <nav class="sticky top-0 z-50 py-4 px-2 bg-[#fffbf7]/90 backdrop-blur-md border-b-4 border-[#2d2d2d] overflow-x-auto flex justify-start md:justify-center gap-3">
         <button onclick="switchTab('day1')" id="tab-day1" class="cute-tab tab-btn px-4 py-3 bg-[#e2f0d9] text-slate-800 font-black text-sm whitespace-nowrap flex items-center gap-1">
             🥑 Day 1 上野熱身
@@ -172,15 +194,18 @@
         </button>
     </nav>
 
+    <!-- 主要內容區 -->
     <main class="max-w-4xl mx-auto px-4 py-8 relative z-10">
 
+        <!-- ============================== DAY 1 ============================== -->
         <div id="content-day1" class="tab-content hidden space-y-8">
             <div class="sticker-card p-6 bg-[#edf7f1] border-4 border-slate-800">
                 <div class="flex items-center gap-3 mb-4">
                     <span class="text-3xl">🛬</span>
-                    <h2 class="text-2xl font-black text-slate-800 playful-title">Day 1：抵達東京！上野阿美橫丁零食與炸豬排</h2>
+                    <h2 class="text-2xl font-black text-slate-800 playful-title">Day 1：抵達東京！上野阿美橫丁零食與炸豬排 🐷</h2>
                 </div>
 
+                <!-- 手帳拍立得貼紙 -->
                 <div class="flex justify-center my-6">
                     <div class="polaroid-frame bg-white max-w-sm w-full border-4 border-slate-800">
                         <div class="w-full h-56 bg-gradient-to-br from-[#cbe9db] to-[#a2d4c0] flex flex-col items-center justify-center p-4 text-center">
@@ -192,6 +217,7 @@
                     </div>
                 </div>
 
+                <!-- 時間分佈線 -->
                 <div class="space-y-6 relative border-l-4 border-dashed border-slate-700 pl-6 ml-4">
                     <div class="relative">
                         <div class="absolute -left-[31px] top-1 bg-green-500 border-2 border-slate-800 rounded-full w-5 h-5 flex items-center justify-center text-[10px] text-white font-bold">1</div>
@@ -251,11 +277,12 @@
             </div>
         </div>
 
+        <!-- ============================== DAY 2 ============================== -->
         <div id="content-day2" class="tab-content hidden space-y-8">
             <div class="sticker-card p-6 border-4 border-slate-800 bg-[#ebf2fa]">
                 <div class="flex items-center gap-3 mb-4">
                     <span class="text-3xl">🎡</span>
-                    <h2 class="text-2xl font-black text-slate-800 playful-title">Day 2：淺草雷門 & 晴空塔 ➔ 澀谷震撼日落與熟食壽司</h2>
+                    <h2 class="text-2xl font-black text-slate-800 playful-title">Day 2：淺草雷門 & 晴空塔 ➔ 澀谷震撼日落與熟食壽司 🍣</h2>
                 </div>
 
                 <div class="flex justify-center my-6">
@@ -340,16 +367,20 @@
                             </a>
                         </div>
                         <p class="text-slate-600 text-sm mt-1">這家迴轉壽司性價比極高，且有大量炙燒起司壽司、特大熟星鰻、現炸大蝦天婦羅、蟹肉可樂餅及茶碗蒸，就算不吃魚生也能大快朵頤！</p>
+                        <div class="bg-[#e2f0d9] border-2 border-slate-700 p-3 rounded-xl mt-2 text-xs font-bold text-slate-700 flex items-center gap-1">
+                            <span>💡 交通大福利：在「澀谷站」搭銀座線（首發站）回上野，保證有位坐，可以舒服地一路睡返酒店！😴</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- ============================== DAY 3 ============================== -->
         <div id="content-day3" class="tab-content hidden space-y-8">
             <div class="sticker-card p-6 border-4 border-slate-800 bg-[#fffdeb]">
                 <div class="flex items-center gap-3 mb-4">
                     <span class="text-3xl">😴</span>
-                    <h2 class="text-2xl font-black text-slate-800 playful-title">Day 3：超爆自然醒 ➔ 輕鬆東京鐵塔打卡 ➔ 台場海景晚餐</h2>
+                    <h2 class="text-2xl font-black text-slate-800 playful-title">Day 3：超爆自然醒 ➔ 輕鬆東京鐵塔打卡 ➔ 台場海景晚餐 🌉</h2>
                 </div>
 
                 <div class="flex justify-center my-6">
@@ -426,6 +457,7 @@
             </div>
         </div>
 
+        <!-- ============================== DAY 4 ============================== -->
         <div id="content-day4" class="tab-content hidden space-y-8">
             <div class="sticker-card p-6 border-4 border-slate-800 bg-[#fff2f2]">
                 <div class="flex items-center gap-3 mb-4">
@@ -455,6 +487,10 @@
                             </a>
                         </div>
                         <p class="text-slate-600 text-sm mt-1">「入谷站」搭地鐵至「上野站」轉 **JR 山手線** ➔ **「池袋站」** (車程 22 分鐘)。在剪票口旁窗口出示護照購買川越周遊券，搭乘東武東上線急行列車，30 分鐘直達川越。</p>
+                        <div class="bg-white border-2 border-slate-700 p-3 rounded-xl mt-2 text-xs flex justify-between items-center font-bold text-slate-700">
+                            <span>池袋 ➔ 川越周遊券套票：</span>
+                            <span>成人 ¥1,200 (約 HK$59) / 兒童 ¥600 (約 HK$29)</span>
+                        </div>
                     </div>
 
                     <div class="relative text-indigo-700">
@@ -497,9 +533,8 @@
 
                     <div class="relative text-pink-700">
                         <div class="absolute -left-[31px] top-1 bg-pink-500 border-2 border-slate-800 rounded-full w-5 h-5 flex items-center justify-center text-[10px] text-white font-bold">★</div>
-                        <div class="text-xs font-black text-pink-600">17:00 - 18:00 🕐</div>
+                        <div class="text-xs font-black text-pink-600 font-bold">下午茶：Sanrio Cafe 池袋店 (太陽城 B1F) 🍰☕</div>
                         <div class="flex flex-wrap items-center gap-2">
-                            <h3 class="font-extrabold text-pink-850 text-lg">下午茶：Sanrio Cafe 池袋店 (太陽城 B1F) 🍰☕</h3>
                             <a href="https://maps.google.com/?q=SANRIO+CAFE+Ikebukuro" target="_blank" rel="noopener" class="map-btn inline-flex items-center gap-1 px-2.5 py-1 bg-orange-100 text-slate-800 font-extrabold text-xs">
                                 📍 SANRIO CAFE 池袋店
                             </a>
@@ -520,11 +555,16 @@
                             </a>
                         </div>
                         <p class="text-slate-600 text-sm mt-1">推薦：**無敵家**（濃厚炙燒豚骨）或 **麵屋 Hulu-lu**（女生超愛、清新爽口的夏威夷風雞湯拉麵）。吃飽後搭 JR 山手線 20 分鐘返上野/入谷飯店。</p>
+                        <div class="bg-white border-2 border-slate-700 p-3 rounded-xl mt-2 text-xs flex justify-between items-center font-bold text-slate-700">
+                            <span>池袋 ➔ 飯店車資：</span>
+                            <span>成人 ¥358 (約 HK$18) / 兒童 ¥179 (約 HK$9)</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- ============================== DAY 5 ============================== -->
         <div id="content-day5" class="tab-content hidden space-y-8">
             <div class="sticker-card p-6 border-4 border-slate-800 bg-[#f1f1f9]">
                 <div class="flex items-center gap-3 mb-4">
@@ -595,32 +635,129 @@
             </div>
         </div>
 
+        <!-- ============================== TABS: PASSES (COMPLETELY RESTORED) ============================== -->
         <div id="content-passes" class="tab-content hidden space-y-6">
+            <!-- Child Card Info -->
             <div class="sticker-card p-6 border-4 border-slate-800 bg-gradient-to-r from-pink-50 to-orange-50">
                 <h2 class="text-2xl font-black text-slate-800 mb-4 playful-title flex items-center gap-2">
                     <i data-lucide="info" class="w-7 h-7 text-pink-500"></i> 小女兒 10 歲兒童西瓜卡全攻略 💳👧
                 </h2>
                 <p class="text-slate-700 text-sm leading-relaxed font-bold">
-                    因為日本的兒童票適用年齡為 6-11 歲，10 歲小女兒的所有車費均為 **5 折半價**。由於 Apple Pay 不能開設兒童卡，第一天抵達機場後，請務必先前往 **JR 東日本旅行服務中心 (JR East Travel Service Center)** 櫃檯購買實體卡。
+                    因為日本的兒童票適用年齡為 6-11 歲，10 歲小女兒的所有交通車費均為 **5 折半價** 💰！由於 Apple Pay 不能開設兒童卡，第一天抵達機場後，請務必先前往 **JR 東日本旅行服務中心 (JR East Travel Service Center)** 櫃檯購買實體卡！
                 </p>
+                <div class="bg-white/80 p-4 rounded-xl mt-4 border-2 border-slate-700 text-xs space-y-2 text-slate-700 font-extrabold">
+                    <p class="text-pink-600 flex items-center gap-1"><i data-lucide="check-square" class="w-4 h-4"></i> 📋 需備材料：小女兒的實體護照 (用於核對年齡)</p>
+                    <p class="text-indigo-600 flex items-center gap-1"><i data-lucide="credit-card" class="w-4 h-4"></i> 💰 票卡費用：購買一張實體 「小兒用 My Suica」，需付押金 ¥500 (約 HK$24.5)，餘額可自由儲值。</p>
+                    <p class="text-amber-600 flex items-center gap-1"><i data-lucide="sparkles" class="w-4 h-4"></i> 💡 溫馨提示：大女兒滿 13 歲算成人，直接用 iPhone Apple Wallet 新增 Mobile Suica 即用！</p>
+                </div>
+            </div>
+
+            <!-- Detailed Passes List -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Skyliner -->
+                <div class="mini-sticker p-5 border-4 border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-extrabold text-slate-800 text-base">京成 Skyliner 來回特急車票 🚀</h3>
+                            <span class="bg-green-200 border border-slate-700 text-green-800 text-[10px] px-2.5 py-0.5 rounded-full font-black">Klook 網購最便宜</span>
+                        </div>
+                        <p class="text-slate-600 text-xs font-bold leading-relaxed mt-2">
+                            成田機場快速往返上野的最優選擇！特急對號座，設有超大行李架，全車覆蓋強冷氣，座位附有充電插座，乘車體驗極佳。
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t-2 border-dashed border-slate-200 flex justify-between items-center">
+                        <span class="text-xs text-slate-400 font-bold">來回套票預算：</span>
+                        <span class="font-black text-pink-600 text-sm">成人約 HK$252 / 兒童約 HK$126</span>
+                    </div>
+                </div>
+
+                <!-- Tobu Pass -->
+                <div class="mini-sticker p-5 border-4 border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-extrabold text-slate-800 text-base">東武川越周遊券 Premium 🚌</h3>
+                            <span class="bg-amber-200 border border-slate-700 text-amber-800 text-[10px] px-2.5 py-0.5 rounded-full font-black">池袋東武站購買</span>
+                        </div>
+                        <p class="text-slate-600 text-xs font-bold leading-relaxed mt-2">
+                            包辦「池袋往返川越電車車票」+「川越市內東武巴士一日無限次任搭」！在池袋站東武中央改票口旁的旅客服務中心窗口出示護照購買。
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t-2 border-dashed border-slate-200 flex justify-between items-center">
+                        <span class="text-xs text-slate-400 font-bold">一日套票價格：</span>
+                        <span class="font-black text-pink-600 text-sm">成人 ¥1,200 (約 HK$59) / 兒童 ¥600 (約 HK$29)</span>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- ============================== TABS: BOOKING (COMPLETELY RESTORED) ============================== -->
         <div id="content-booking" class="tab-content hidden space-y-6">
             <div class="sticker-card p-6 border-4 border-slate-800 bg-pink-50">
                 <div class="flex items-center gap-2 mb-4">
                     <span class="text-3xl animate-bounce">🔔</span>
-                    <h2 class="text-2xl font-black text-slate-800 playful-title">核心行程官方預約網站 📲</h2>
+                    <h2 class="text-2xl font-black text-slate-800 playful-title">東京 5 日行：核心行程官方預約網站 📲</h2>
                 </div>
+                
+                <p class="text-slate-600 text-sm font-bold mb-6">
+                    為了避免現場售罄或在暑假烈日下排隊數小時，以下精選了此行中**必須提前預約**的所有大熱熱門景點與體驗官網，點擊即可一秒直達預約！
+                </p>
+
                 <div class="space-y-4">
+                    <!-- Shibuya Sky -->
                     <div class="p-4 rounded-2xl bg-white border-2 border-slate-700 shadow-[4px_4px_0px_#2d2d2d] flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
-                        <div>
-                            <h3 class="font-extrabold text-slate-800">Shibuya Sky 360度展望台 🌇</h3>
-                            <p class="text-slate-500 text-xs mt-1">⏱️ 搶票密技：出發日前 28 天的日本時間 00:00 準時開搶。</p>
+                        <div class="flex-1">
+                            <h3 class="font-extrabold text-slate-800 text-base">Shibuya Sky 360度展望台 🌇</h3>
+                            <p class="text-slate-500 text-xs mt-1 leading-relaxed">⏱️ 搶票密技：出發日前 28 天的日本時間 00:00 (即香港時間前一晚 23:00) 準時開搶 17:00 - 17:30 的黃昏黃金場次！</p>
                         </div>
                         <div class="flex gap-2 w-full md:w-auto">
                             <a href="https://www.klook.com/" target="_blank" class="bg-pink-500 hover:bg-pink-600 border-2 border-slate-800 text-white text-xs px-3 py-2 rounded-xl font-black shadow-sm text-center flex-1 md:flex-initial">Klook 特惠預約</a>
+                            <a href="https://www.shibuya-scramble-square.com/sky/" target="_blank" class="bg-white hover:bg-slate-50 border-2 border-slate-800 text-slate-800 text-xs px-3 py-2 rounded-xl font-black shadow-sm text-center flex-1 md:flex-initial">官方網站</a>
                         </div>
+                    </div>
+
+                    <!-- Yukata Sarasa -->
+                    <div class="p-4 rounded-2xl bg-white border-2 border-slate-700 shadow-[4px_4px_0px_#2d2d2d] flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                        <div class="flex-1">
+                            <h3 class="font-extrabold text-slate-800 text-base">川越和服體驗 - 沙羅 (浴衣口碑經典店) 👘</h3>
+                            <p class="text-slate-500 text-xs mt-1 leading-relaxed">⏱️ 預約建議：提前 1 至 2 個月在官網預約。8 月冰川神社風鈴祭預約極其火爆，現場無法排隊。</p>
+                        </div>
+                        <a href="https://kimono-sara.jimdofree.com/" target="_blank" class="bg-pink-500 hover:bg-pink-600 border-2 border-slate-800 text-white text-xs px-4 py-2.5 rounded-xl font-bold text-center w-full md:w-auto whitespace-nowrap">沙羅 官方預約</a>
+                    </div>
+
+                    <!-- Yukata Yuzuya -->
+                    <div class="p-4 rounded-2xl bg-white border-2 border-slate-700 shadow-[4px_4px_0px_#2d2d2d] flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                        <div class="flex-1">
+                            <h3 class="font-extrabold text-slate-800 text-base">川越和服 柚屋 (款式新潮、就在老街) 👘</h3>
+                            <p class="text-slate-500 text-xs mt-1 leading-relaxed">⏱️ 預約建議：店員非常溫柔熱情，穿戴十分專業快速，有多款可愛日式浴衣可選。</p>
+                        </div>
+                        <a href="https://yuzuya-kimono.com.tw/" target="_blank" class="bg-pink-500 hover:bg-pink-600 border-2 border-slate-800 text-white text-xs px-4 py-2.5 rounded-xl font-bold text-center w-full md:w-auto whitespace-nowrap">柚屋 官方預約</a>
+                    </div>
+
+                    <!-- Skyliner -->
+                    <div class="p-4 rounded-2xl bg-white border-2 border-slate-700 shadow-[4px_4px_0px_#2d2d2d] flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                        <div class="flex-1">
+                            <h3 class="font-extrabold text-slate-800 text-base">京成 Skyliner 機場特急來回票 🚀</h3>
+                            <p class="text-slate-500 text-xs mt-1 leading-relaxed">⏱️ 特惠預購：提前在 Klook 購買來回套票，比現場購買省 10%，還可以直接在手機上完成劃位選座！</p>
+                        </div>
+                        <a href="https://www.klook.com/" target="_blank" class="bg-pink-500 hover:bg-pink-600 border-2 border-slate-800 text-white text-xs px-4 py-2.5 rounded-xl font-bold text-center w-full md:w-auto whitespace-nowrap">Klook 特惠劃位</a>
+                    </div>
+
+                    <!-- Unko Museum -->
+                    <div class="p-4 rounded-2xl bg-white border-2 border-slate-700 shadow-[4px_4px_0px_#2d2d2d] flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                        <div class="flex-1">
+                            <h3 class="font-extrabold text-slate-800 text-base">台場便便博物館門票 💩🎨</h3>
+                            <p class="text-slate-500 text-xs mt-1 leading-relaxed">⏱️ 建議：暑假黃金檔期排隊人數眾多，強烈建議提前網購電子門票，當天掃碼即可入館大玩互動遊戲。</p>
+                        </div>
+                        <a href="https://www.klook.com/" target="_blank" class="bg-pink-500 hover:bg-pink-600 border-2 border-slate-800 text-white text-xs px-4 py-2.5 rounded-xl font-bold text-center w-full md:w-auto whitespace-nowrap">電子門票 網購特惠</a>
+                    </div>
+
+                    <!-- Midori Sushi -->
+                    <div class="p-4 rounded-2xl bg-white border-2 border-slate-700 shadow-[4px_4px_0px_#2d2d2d] flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                        <div class="flex-1">
+                            <h3 class="font-extrabold text-slate-800 text-base">迴轉壽司 活美登利 (西武澀谷店) 🍣</h3>
+                            <p class="text-slate-500 text-xs mt-1 leading-relaxed">⏱️ 避開人潮：現場排隊常超過 1 小時！可提前在手機上下載日本排隊 App 「EPARK」，進行遠端抽號碼牌或查詢現場排隊狀況。</p>
+                        </div>
+                        <a href="https://katumidori.co.jp/shibuya/" target="_blank" class="bg-pink-500 hover:bg-pink-600 border-2 border-slate-800 text-white text-xs px-4 py-2.5 rounded-xl font-bold text-center w-full md:w-auto whitespace-nowrap">官網與排隊詳情</a>
                     </div>
                 </div>
             </div>
@@ -628,7 +765,9 @@
 
     </main>
 
+    <!-- 可愛卡通裝飾頁腳 -->
     <footer class="bg-[#2d2d2d] text-white py-12 text-center text-xs mt-16 relative border-t-8 border-pink-300">
+        <!-- 旋轉太陽或星星 -->
         <div class="absolute -top-7 left-1/2 -translate-x-1/2 bg-yellow-300 border-4 border-[#2d2d2d] rounded-full p-2 w-14 h-14 flex items-center justify-center star-spin-effect shadow-md">
             <span class="text-2xl animate-bounce">💖</span>
         </div>
@@ -638,6 +777,7 @@
         <p class="mt-2 text-slate-500 font-bold">網頁版港幣價格以 1 JPY ≈ 0.049 HKD 匯率精確轉換。</p>
     </footer>
 
+    <!-- Tab 切換控制 JavaScript -->
     <script>
         function switchTab(tabId) {
             const contents = document.querySelectorAll('.tab-content');
@@ -654,7 +794,7 @@
 
         window.onload = function() {
             lucide.createIcons();
-            switchTab('day1'); // 預設改為從 Day 1 開始看起
+            switchTab('day1'); // 預設為 Day 1
         }
     </script>
 </body>
